@@ -1,31 +1,28 @@
-import React, { Children } from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import About from './Components/About';
+import React, { Children } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import About from "./Components/About";
 
-import { createBrowserRouter ,RouterProvider } from "react-router-dom";
-import Error from './Components/Error';
-import RestrauntMenu from './Components/RestrauntMenu';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Error from "./Components/Error";
+import RestrauntMenu from "./Components/RestrauntMenu";
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<App/>,
-    errorElement :<Error/>
-
-
-
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
   },
   {
-    path:"/about",
-    element:<About/>
-
+    path: "/about",
+    element: <About />,
+    errorElement: <Error />,
   },
   {
-    path:"/restraunt/:id",
-    element:<RestrauntMenu/>
-
+    path: "/restraunt/:resId",
+    element: <RestrauntMenu />,
+    errorElement: <Error />,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
